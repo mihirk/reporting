@@ -26,8 +26,6 @@ class TestObjectSerialization(unittest.TestCase):
                                   test_observation, test_observation, test_observation)
         test_encounter = Encounter(2195, 1, "TEST_TYPE", [test_diagnosis, test_diagnosis], [test_prescription], [test_complaints],
                                    test_vitals, [test_observation], [test_lab_results], "Test Location")
-        self.test_patient = Patient("Test Patient", 2195, "Test Address", "Test Relatives", 12,
-                               "Female", encounters=None, adherences=None)
         self.test_patient_with_encounters = Patient("Test Patient", 2195, "Test Address", "Test Relatives", 12,
                                "Female", encounters=[test_encounter, test_encounter], adherences=[test_adherence])
 

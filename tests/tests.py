@@ -42,3 +42,6 @@ class TestObjectSerialization(unittest.TestCase):
     def test_patient_serialization(self):
         serialized_patient = self.test_patient_with_encounters.get_json()
         self.assertTrue(self.is_valid_json(serialized_patient))
+
+if __name__ == '__main__':
+    unittest.main()

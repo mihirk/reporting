@@ -1,3 +1,4 @@
+#!/bin/sh
 set -e
 curl -L https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-1.1.1.tar.gz > elasticsearch.tar.gz
 tar -xvf elasticsearch.tar.gz

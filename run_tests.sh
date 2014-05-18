@@ -2,8 +2,11 @@
 set -e
 curl -L https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-1.1.1.tar.gz > elasticsearch.tar.gz
 tar -xvf elasticsearch.tar.gz
-./elasticsearch-1.1.1/bin/elasticsearch -d
-sleep 5
+bash elasticsearch-1.1.1/bin/elasticsearch -d
+echo "Sleeping for 20 seconds"
+sleep 20
+echo "Back up again :)"
+ps -eaf | grep elasticsearch
 python -m unittest discover
 status=$?
 if [ $status -ne 0 ]; then
